@@ -15,7 +15,7 @@ return {
         root_markers = { "compile_commands.json", "compile_flags.txt", ".clangd", ".git" },
       })
 
-      vim.lsp.enable("clangd")
+      vim.lsp.enable({ "clangd", "intelephense" })
 
       vim.api.nvim_create_autocmd("LspAttach", {
         callback = function(ev)
